@@ -18,7 +18,7 @@ const Container = styled.ul`
       font-size: 30px;
     }
   }
-  
+
   .slick-prev {
     left: 0;
   }
@@ -37,21 +37,21 @@ export const SliderItem = styled.li`
   }
 `;
 
-
 const Slider = ({ children }) => (
   <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: false,
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-    }}
+    <SlickSlider
+      {...{
+        dots: false,
+        infinite: false,
+        speed: 300,
+        centerMode: false,
+        variableWidth: true,
+        adaptiveHeight: true,
+      }}
     >
       {children}
     </SlickSlider>
   </Container>
 );
 
-export default Slider; 
+export default Slider;
