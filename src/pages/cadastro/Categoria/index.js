@@ -26,7 +26,9 @@ function NewCategory() {
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:3333/categories';
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:3333/categories'
+      : 'https://thesciflix.herokuapp.com/categories';
     fetch(URL).then(async (serverAnswer) => {
       const answer = await serverAnswer.json();
       setCategories([...answer]);
